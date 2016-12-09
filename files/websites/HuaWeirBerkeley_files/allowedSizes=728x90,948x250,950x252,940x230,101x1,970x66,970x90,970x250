@@ -1,0 +1,13 @@
+document.write('<a href="https://adserver.adtech.de/?adlink/737/6238460/93484975/225/AdId=14732385;BnId=4;itime=120875990;impref=1481120876260048995;imprefseq=67835602766890937;imprefts=1481120876;" target="_blank"><img src="https://aka-cdn.adtech.de/images/473/Ad0St1Sz225Sq0V0Id110030809.jpg" border="0" alt="click here" width="728" height="90"/></a>');
+  
+document.write('<img src="https://atpixel.alephd.com/post_adtech?GhPexX7zBRCEmNu7KHNGVth6uMgkz1cMvrZnoTvSVpFrKmXS5kCAbj-Cgvni8XUEMfK6c4zOvhdW41XqGDh63IqQqg2ryYKlV-KVWUZ9XVtiSuiTzOi0qUrAUvMe10-JBhu5B38PXOhnCahH-.oNanwsVoHPHX0GM.1nipAFpaQF-mkTbwbIugWpS5QtXEIU7TjRxfMbyYznwyPDq2kA7QWoFcOTkbA1YdTe0DgX6m8=" width="1" height="1"  style="display:none;">');
+document.write('<img src="https://pixel.quantserve.com/pixel/p-jbHqnWPLEUTzP.gif?idmatch=0" width="1" height="1" style="display:none;">');
+document.write('<img src="https://ums.adtech.de/mapuser?providerid=1034;getuser=https://pr-bh.ybp.yahoo.com/sync/adtech/$UID?secure=true" width="1" height="1" style="display:none;">');
+document.write('<img src="https://rtb.metrigo.com/delivery/sync/adtech/pixel_match" width="1" height="1" style="display:none;">');
+document.write('<img src="https://c1.adform.net/serving/cookie/match/?CC=1&party=15&curl=https://ums.adtech.de/mapuser?providerid=1016;userid=$UID" width="1" height="1" style="display:none;">');
+document.write('<img src="https://ums.adtech.de/mapuser?providerid=1039;userid=0;getuser=https://pix04.revsci.net/D08734/a1/0/0/0.gif?DM_LOC=http%3A%2F%2Faol.com%2F0.gif%3Fid%3D$UID" width="1" height="1" style="display:none;">');
+document.write('<img src="https://d5p.de17a.com/getuid/adtech" width="1" height="1" style="display:none;">');
+document.write('<img src="https://match.adsby.bidtheatre.com/adtechmatch?redir=https://ums.adtech.de/mapuser?providerid=1041;userid=$UID" width="1" height="1" style="display:none;">');
+document.write('<img src="https://x.bidswitch.net/sync?ssp=aol" width="1" height="1" style="display:none;">');
+document.write('<img src="https://ib.adnxs.com/getuid?https://ums.adtech.de/mapuser?providerid=1001;userid=$UID" width="1" height="1" style="display:none;">');
+document.write('<iframe src="https://ad.turn.com/server/pixelssl.htm?fpid=28" width="1" height="1" style="display: none"></iframe>');
