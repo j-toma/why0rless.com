@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "restricted area"
+AuthUserFile /home/jtoma/Documents/why0rless.com/pages/.htpasswd
+require valid-user
