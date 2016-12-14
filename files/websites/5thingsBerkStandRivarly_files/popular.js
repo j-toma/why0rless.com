@@ -1,1 +1,0 @@
-jQuery(function($){$("#secondary .tabs ul a").click(function(e){e.preventDefault();$(this).closest("ul").find("li").removeClass("active");$(this).parent().addClass("active");var dest=$(this).attr("href").substr(1);$(this).closest(".tabs").find("ol").removeClass("active").filter(function(){return $(this).data("id")===dest;}).addClass("active");}).first().click();});

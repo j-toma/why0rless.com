@@ -1,1 +1,0 @@
-PARSELY.pInit({"apikey":"techcrunch.com","settings":{"debug":false,"widget":false,"tracker":true},"customizations":null,"track_ip_addresses":true,"bundle":"/code/ptrack-v0.6.0-engaged-time.js","track_third_party_cookies":true,"uuid":"8beac418-c7e8-48da-9389-c92dc0960dd8","network_uuid":"9876af73-aceb-4823-b2ac-7afa99fbf643","apikey_uuid":"8beac418-c7e8-48da-9389-c92dc0960dd8"});
