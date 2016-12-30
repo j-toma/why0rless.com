@@ -118,6 +118,12 @@ $(function(){
 							  answerKey = ' Answers <br />',
 							  score;
                 for (var i = 0, ii = results.length; i < ii; i++){
+									  // if (results[i] == true) {
+										// 	resultSet += '<div class="resultRow"> Question #' + (i + 1) +  "<div class='correct'><span>Correct</span></div>"
+										// }
+										// else {
+										// 	resultSet += '<div class="resultRow">' + questionsList.text().split(".")[i] +  "<div class='wrong'><span>Wrong</span></div>"
+										// };
                     if (results[i] == true) trueCount++;
                     resultSet += '<div class="resultRow"> Question #' + (i + 1) + (results[i]== true ? "<div class='correct'><span>Correct</span></div>": "<div class='wrong'><span>Wrong</span></div>") + "</div>";
 
