@@ -34,7 +34,7 @@ function Result(props) {
           </div>
         )}
         <ul className="endButtons">
-          <li className="endButton"><a href="../../build/index.html">Restart</a></li>
+          <li className="endButton"><a href="../build/index.html">Restart</a></li>
           <li className="endButton"><a href="../../practice.html">Go back</a></li>
         </ul>
       </div>

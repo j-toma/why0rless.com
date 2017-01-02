@@ -80,7 +80,6 @@ class App extends Component {
     const updatedAnswersCount = update(this.state.answersCount, {
       [answer]: {$apply: (currentValue) => currentValue + 1}
     });
-
     this.setState({
         answersCount: updatedAnswersCount,
         answer: answer
@@ -107,11 +106,16 @@ class App extends Component {
     const answersCount = this.state.answersCount;
     const trueCount = answersCount['true'];
     const questionCount = quizQuestions.length;
-    return 100*trueCount/questionCount
+    const res = trueCount ? 100*trueCount/questionCount : 0.0;
+    return res
   }
 
   setResults2(result) {
-    this.setState({ result: result })
+    const counter = this.state.counter + 1
+    this.setState({
+      counter: counter,
+      result: result
+    });
   }
 
   renderQuiz() {
@@ -139,7 +143,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.state.result ? this.renderResult() : this.renderQuiz()}
+        {this.state.counter == quizQuestions.length? this.renderResult() : this.renderQuiz()}
       </div>
     );
   }
