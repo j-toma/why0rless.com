@@ -103,6 +103,48 @@ var quizQuestions = [
               content: "One side adapts to the needs of the other"
           }
       ]
+  },
+  {
+      question: "When is compromise necessary?",
+      answers: [
+          {
+              type: "true",
+              content: "When a conflict is very difficult to resolve"
+          },
+          {
+              type: "false1",
+              content: "When both sides are in complete agreement"
+          },
+          {
+              type: "false2",
+              content: "When on side is very accomodating"
+          },
+          {
+              type: "false3",
+              content: "When one side is extremely demanding"
+          }
+      ]
+  },
+  {
+      question: "What is a DISADVANTAGE of compromise?",
+      answers: [
+          {
+              type: "true",
+              content: "Sometimes the conflict isn't completely resolved"
+          },
+          {
+              type: "false1",
+              content: "Progress can be made even though there is no winner"
+          },
+          {
+              type: "false2",
+              content: "It allows people who don't agree to work together"
+          },
+          {
+              type: "false3",
+              content: "It can allow people to move forward even if they don't agree"
+          }
+      ]
   }
 ];
 
