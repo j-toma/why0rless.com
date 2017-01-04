@@ -21,7 +21,7 @@ var quizQuestions = [
       ]
   },
   {
-      question: "What bullying role to the girls in the class play in this situation?",
+      question: "What bullying role do the girls in the class play in this situation?",
       answers: [
           {
               type: "true",

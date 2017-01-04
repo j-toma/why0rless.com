@@ -21,7 +21,7 @@ var quizQuestions = [
       ]
   },
   {
-      question: "Why do you think the team mebers begin to lose their interest?",
+      question: "Why do you think the team mebers begin to lose interest?",
       answers: [
           {
               type: "true",
@@ -67,7 +67,7 @@ var quizQuestions = [
       answers: [
           {
               type: "true",
-              content: "Suggest ways that the strengths of different members could be put to use"
+              content: "suggest ways that the strengths of different members could be put to use"
           },
           {
               type: "false1",

@@ -67,7 +67,7 @@ var quizQuestions = [
       answers: [
           {
               type: "true",
-              content: "I may feel annoyed and that I won't come back to think cafe."
+              content: "I may feel annoyed and that I won't come back to the cafe."
           },
           {
               type: "false1",
