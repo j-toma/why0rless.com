@@ -16,7 +16,7 @@ h1, h2, h3, h4 {
 /* Main content area */
 
 #content {
-  margin: 80px 70px;
+  margin: 30px 5px;
   text-align: center;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -44,7 +44,7 @@ h1, h2, h3, h4 {
 /* Slots for final card positions */
 
 #shortDescSlot, #longDescSlot {
-  margin: 50px auto 0 auto;
+  margin: 10px auto 0 auto;
   background: #ddf;
 }
 
@@ -56,7 +56,7 @@ h1, h2, h3, h4 {
 }
 
 #shortDescSlot, #longDescSlot, #cardPile {
-  width: 2210px;
+  width: 1810px;
   /*width: 12000px;*/
   height: 320px;
   padding: 20px;
@@ -73,7 +73,7 @@ h1, h2, h3, h4 {
 
 #shortDescSlot div, #longDescSlot div, #cardPile div {
   float: left;
-  width: 244px;
+  width: 193px;
   height: 292px;
   padding: 10px;
   padding-top: 20px;
@@ -99,7 +99,7 @@ h1, h2, h3, h4 {
 }
 
 #shortDescSlot div {
-  font-size: 35px;
+  font-size: 30px;
 }
 
 #cardPile div {

@@ -6,13 +6,13 @@ var data = [
     key: 1,
     role: 'Coach',
     shortDesc: 'maintain harmony',
-    longDesc: "They build rapport with team members and ensure that each member is valued for their contributions. Their role involves motivating others and creating a positive atmosphere. They seek to overcome differences so that the team can work collaboratively and effectively together."
+    longDesc: "Their role involves motivating others and creating a positive atmosphere. They seek to overcome differences so that the team can work collaboratively and effectively together."
   },
   {
     key: 2,
     role: 'Explorer',
     shortDesc: 'discover new',
-    longDesc: "They are forward-looking and seek to improve the status quo by discovering new ways of achieving a better outcome for the future of the organisation. They attention is directed to beneficial change and uncovering valuable hidden potential in people, siuations and things."
+    longDesc: "They are forward-looking and seek to improve the status quo by discovering new ways of achieving a better outcome. They uncovering valuable hidden potential in people, siuations and things."
   },
   {
     key: 3,
