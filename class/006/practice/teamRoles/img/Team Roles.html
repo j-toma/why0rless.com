@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:8000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Team Roles</title>
+    
+    <link rel="stylesheet" type="text/css" href="./Team Roles_files/style.css">
+
+    <script src="./Team Roles_files/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+    </script>
+
+    <script src="./Team Roles_files/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous">
+    </script>
+
+    <script type="text/javascript" src="./Team Roles_files/script.js"></script>
+
+  </head>
+  <body>
+    <h3>Team Roles</h3>
+    <p>This activity concerns Task 2.5 B. See page 76 of your book.</p>
+    <div id="content">
+      <div id="cardPile"><div id="card2" class="ui-draggable ui-draggable-handle" style="position: relative;">Explorer</div><div id="card6" class="ui-draggable ui-draggable-handle" style="position: relative;">Curator</div><div id="card3" class="ui-draggable ui-draggable-handle" style="position: relative;">Scultpor</div><div id="card8" class="ui-draggable ui-draggable-handle" style="position: relative;">Innovator</div><div id="card4" class="ui-draggable ui-draggable-handle" style="position: relative;">Conductor</div><div id="card1" class="ui-draggable ui-draggable-handle" style="position: relative;">Coach</div><div id="card5" class="ui-draggable ui-draggable-handle" style="position: relative;">Crusader</div><div id="card7" class="ui-draggable ui-draggable-handle" style="position: relative;">Scientist</div></div>
+      <div id="shortDescSlot"><div class="ui-droppable">discover new</div><div class="ui-droppable">clarify understanding</div><div class="ui-droppable">maintain harmony</div><div class="ui-droppable">plan and organise</div><div class="ui-droppable">analyse and explain</div><div class="ui-droppable">evaluate and emphasize</div><div class="ui-droppable">take action</div><div class="ui-droppable">create ideas</div></div>
+      <div id="longDescSlot" style="display: none;"><div class="ui-droppable">They build rapport with team members and ensure that each member is valued for their contributions. Their role involves motivating others and creating a positive atmosphere. They seek to overcome differences so that the team can work collaboratively and effectively together.</div><div class="ui-droppable">They identify appropriate team roles, responsibilities, skills and resources for the assigned task. Once appropriate plans and procedures are established, they ensure that they are followed accordingly.</div><div class="ui-droppable">They are forward-looking and seek to improve the status quo by discovering new ways of achieving a better outcome for the future of the organisation. They attention is directed to beneficial change and uncovering valuable hidden potential in people, siuations and things.</div><div class="ui-droppable">They ensure that a clear picture and understanding of the specific team task is achieved so as to attain their goals effectively with a view to future expansion.</div><div class="ui-droppable">They evaluate the ideas and suggestions offered by team mebers and emphasize those ideas, suggestions and thoughts that are important and significant for the team's purpose and ultimate goal. They are drive by values and inner convictions.</div><div class="ui-droppable">They are action-oriented and aim to maintain the team's sense of urgency. They use their personal experience and knowledge to assess the team tasks and ensure that they are completed efficiently.</div><div class="ui-droppable">They formulate hypotheses and gather evidence to support the explanations provided. They help conceptualise ideas to enable a clear understanding of solutions.</div><div class="ui-droppable">They create fresh ideas and insights based on their imaginations and observations of the world around them. They provide unique solutions to issues and generate long-term vision.</div></div>
+      <div id="successShort" style="display: none; left: 580px; top: 250px; width: 0px; height: 0px;">
+        <h2>You did it!</h2>
+        <button onclick="short2Long()">Round Two: Long Descriptions</button>
+      </div>
+      <div id="successLong" style="display: none; left: 580px; top: 250px; width: 0px; height: 0px;">
+        <h2>You did it!</h2>
+        <button onclick="init()">Play Again</button>
+      </div>
+    </div>
+    <input type="button" value="Go Back From Whence You Came!" onclick="history.back(-1)">
+  
+
+</body><div></div></html>

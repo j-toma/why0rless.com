@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Team Roles</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous">
+    </script>
+
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous">
+    </script>
+
+    <script type="text/javascript" src="script.js"></script>
+
+  </head>
+  <body>
+    <h3>Team Roles</h3>
+    <p>This activity concerns Task 2.5 B. See page 76 of your book.</p>
+    <div id="content">
+      <div id="cardPile"></div>
+      <div id="shortDescSlot"></div>
+      <div id="longDescSlot"></div>
+      <div id ="successShort">
+        <h2>You did it!</h2>
+        <button onclick="short2Long()">Round Two: Long Descriptions</button>
+      </div>
+      <div id ="successLong">
+        <h2>You did it!</h2>
+        <button onclick="init()">Play Again</button>
+      </div>
+    </div>
+    <input type="button" value="Go Back From Whence You Came!" onclick="history.back(-1)" />
+  </body>
+</html>
