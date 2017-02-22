@@ -97,7 +97,7 @@ function handleClick(div) {
   if (clicked.length === 2) {
     testMatch(clicked[0],clicked[1]);
   }
-  console.log(clicked);
+  // console.log(clicked);
 }
 
 // check if click on matching
@@ -106,8 +106,15 @@ function testMatch(div1,div2) {
     div1.style.color = 'green';
     div2.style.color = 'green';
     var ul = document.getElementById('correct');
-    var key = div1.dataset.key;
-    ul.innerHTML = ul.innerHTML + '<li>' + data[key-1]['concept'] + ' ' + data[key-1]['explanation'] + '.</li>'
+    // this is a big weakness (it relies on the order of the data rather than properly using the key)
+    // var key = div1.dataset.key;
+    // try a for loop (probably slow?)
+    for (var i=0; i<data.length;i++) {
+      if (data[i].key == div1.dataset.key) {
+        ul.innerHTML = ul.innerHTML + '<li>' + data[i]['concept'] + ' ' + data[i]['explanation'] + '.</li>';
+      }
+    }
+    // ul.innerHTML = ul.innerHTML + '<li>' + data[key-1]['concept'] + ' ' + data[key-1]['explanation'] + '.</li>'
   } else {
     // reset shading if no match
     div1.style.color = 'black';
