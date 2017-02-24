@@ -2,42 +2,50 @@ var data = [
   {
     key: 1,
     concept: 'File',
-    explanation: 'Save, Save As, Close, Info, Recent, New, Print, Save & Send, Help, Add-Ins, Exit'
+    explanation: 'Save, Save As, Close, Info, Recent, New, Print, Save & Send, Help, Add-Ins, Exit',
+    color: 'red'
   },
   {
     key: 2,
     concept: 'Home',
-    explanation: 'Clipboard, Font, Alignment, Number, Styles, Cells, Editing'
+    explanation: 'Clipboard, Font, Alignment, Number, Styles, Cells, Editing',
+    color: 'orange'
   },
   {
     key: 3,
     concept: 'Insert',
-    explanation: 'Table, Illustrations, Charts, Sparklines, Filter, Links, Text, Symbols'
+    explanation: 'Table, Illustrations, Charts, Sparklines, Filter, Links, Text, Symbols',
+    color: 'yellow'
   },
   {
     key: 4,
     concept: 'Page Layout',
-    explanation: 'Themes, Page Setup, Scale to Fit, Sheet Options, Arrange'
+    explanation: 'Themes, Page Setup, Scale to Fit, Sheet Options, Arrange',
+    color: 'green'
   },
   {
     key: 5,
     concept: 'Formulas',
-    explanation: 'Function Library, Defined Names, Formula Auditing, Calculation'
+    explanation: 'Function Library, Defined Names, Formula Auditing, Calculation',
+    color: 'blue'
   },
   {
     key: 6,
     concept: 'Data',
-    explanation: 'Get External Data, Connections, Sort & Filter, Data Tools, Outline'
+    explanation: 'Get External Data, Connections, Sort & Filter, Data Tools, Outline',
+    color: 'purple'
   },
   {
     key: 7,
     concept: 'Review',
-    explanation: 'Proofing, Language, Comments, Changes'
+    explanation: 'Proofing, Language, Comments, Changes',
+    color: 'pink'
   },
   {
     key: 8,
     concept: 'View',
-    explanation: 'Workbook Views, Show, Zoom, Window, Macros'
+    explanation: 'Workbook Views, Show, Zoom, Window, Macros',
+    color: 'aqua'
   }
 ];
 
@@ -118,15 +126,16 @@ function handleClick(div) {
 // check if click on matching
 function testMatch(div1,div2) {
   if (div1.dataset.key === div2.dataset.key) {
-    div1.style.color = 'green';
-    div2.style.color = 'green';
     var ul = document.getElementById('correct');
     // this is a big weakness (it relies on the order of the data rather than properly using the key)
     // var key = div1.dataset.key;
     // try a for loop (probably slow?)
     for (var i=0; i<data.length;i++) {
       if (data[i].key == div1.dataset.key) {
+        console.log(i,data[i]);
         ul.innerHTML = ul.innerHTML + '<li>' + data[i]['concept'] + ' --> ' + data[i]['explanation'] + '.</li>';
+        div1.style.color = data[i]['color'];
+        div2.style.color = data[i]['color'];
       }
     }
     // ul.innerHTML = ul.innerHTML + '<li>' + data[key-1]['concept'] + ' ' + data[key-1]['explanation'] + '.</li>'
