@@ -1,0 +1,33 @@
+<!-- // so the first idea will be to label a picture
+// set a timer
+// show a square around an item on excell screen
+// select from a list of labels at bottom
+// if correct the image will change to one with the label on it and the label will disappear from the list at the bottom
+// hold image with label for 2 seconds before showing a new image with a square around another item
+// repeat untill no items in list at bottom
+// display time - number of items * 2
+
+// let the image order be random -->
+
+<html>
+<script type="text/javascript" src="script.js"></script>
+<body>
+  <h3>The Excel Screen</h3>
+  <p>You will be given a picture with a red box around some area of the Excell screen, click on the correct label from the list beneath the picture. When you click on the "I'm Ready" button, a timer will start. Try to label everything as quickly as you can.<p>
+  <input type="button" id="create" value="I'm Ready" onclick="timer()">
+  <div id="pictureContainer">
+    <img src="img/screen.jpg" style="width:1000px; height=700px;">
+  </div>
+  <br>
+  <div id="labelContainer">
+    <button type="button">Everything!</button>
+  </div>
+  <div id="time">
+    <h1>Stopwatch</h1>
+    <p><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>:<span id=tens>00</span></p>
+    <button id="button-start">Start</button>
+    <button id="button-stop">Stop</button>
+    <button id="button-reset">Reset</button>
+  </div>
+</body>
+</html>
