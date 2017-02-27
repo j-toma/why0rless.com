@@ -1,0 +1,9 @@
+#pictureContainer {
+  border: 1px solid black;
+  padding: 25px;
+}
+
+#labelContainer {
+  border: 1px solid black;
+  padding: 25px;
+}
