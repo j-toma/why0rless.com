@@ -22,10 +22,98 @@ var data = {
     label: "Minimize, Restore, Close buttons",
     question: "screen4",
     answer: "ascreen4"
-  }
+  },
+  5: {
+    key: 5,
+    label: "Minimize the Ribbon",
+    question: "screen5",
+    answer: "ascreen5"
+  },
+  6: {
+    key: 6,
+    label: "Help Menu",
+    question: "screen6",
+    answer: "ascreen6"
+  },
+  7: {
+    key: 7,
+    label: "Groups",
+    question: "screen7",
+    answer: "ascreen7"
+  },
+  8: {
+    key: 8,
+    label: "Dialog Box Launcher",
+    question: "screen8",
+    answer: "ascreen8"
+  },
+  9: {
+    key: 9,
+    label: "Formula Bar",
+    question: "screen9",
+    answer: "ascreen9"
+  },
+  10: {
+    key: 10,
+    label: "Ribbon",
+    question: "screen10",
+    answer: "ascreen10"
+  },
+  11: {
+    key: 11,
+    label: "The Ribbon",
+    question: "screen11",
+    answer: "ascreen11"
+  },
+  22: {
+    key: 22,
+    label: "Vertical Scrollbar",
+    question: "screen22",
+    answer: "ascreen22"
+  },
+  21: {
+    key: 21,
+    label: "Zoom slider",
+    question: "screen21",
+    answer: "ascreen21"
+  },
+  20: {
+    key: 20,
+    label: "View icons",
+    question: "screen20",
+    answer: "ascreen20"
+  },
+  19: {
+    key: 19,
+    label: "Horizontal Scrollbar",
+    question: "screen19",
+    answer: "ascreen19"
+  },
+  18: {
+    key: 18,
+    label: "Sheet Tabs",
+    question: "screen18",
+    answer: "ascreen18"
+  },
+  17: {
+    key: 17,
+    label: "Column",
+    question: "screen17",
+    answer: "ascreen17"
+  },
+  15: {
+    key: 15,
+    label: "Row",
+    question: "screen15",
+    answer: "ascreen15"
+  },
+  16: {
+    key: 16,
+    label: "Cell",
+    question: "screen16",
+    answer: "ascreen16"
+  },
 }
-
-
 
 // var buttonStop = document.getElementById('button-stop');
 // buttonStop.onclick = function() {

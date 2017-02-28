@@ -6,13 +6,14 @@
 #labels {
   padding-bottom: 20px;
 }
+
 .button {
   background-color: white;
   border: 2px solid red;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 10px 10px 10px 10px;
   font-size: 18px;
   margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 #top {
