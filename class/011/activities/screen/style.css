@@ -27,14 +27,14 @@
   padding-right: 20px;
   font-size: 18px;
   float: left;
-  width: 50%;
+  width: 60%;
   /*margin-bottom: 10px;*/
 }
 
 #buttons {
   border: 10px solid blue;
   float: right;
-  width: 45%;
+  width: 30%;
 }
 
 #button-start, #button-continue {
@@ -65,9 +65,14 @@
 }
 
 #middle-right {
+  margin-top: 20px;
   float: right;
   width: 40%;
 }
+
+/*#middle {
+  margin-top: 40px;
+}*/
 
 #time {
   padding-left: 20px;
