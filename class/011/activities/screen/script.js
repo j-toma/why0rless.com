@@ -25,37 +25,41 @@ var data = {
   }
 }
 
-function timer () {
 
-  var seconds = 00;
-  var tens = 00;
-  var minutes = 00;
-  var hours = 00;
+
+// var buttonStop = document.getElementById('button-stop');
+// buttonStop.onclick = function() {
+//    clearInterval(Interval);
+// }
+
+
+// var buttonReset = document.getElementById('button-reset');
+// buttonReset.onclick = function() {
+//   clearInterval(Interval);
+//   minutes = "00";
+//   tens = "00";
+//   seconds = "00";
+//   appendMinutes.innerHTML = minutes;
+//   appendTens.innerHTML = tens;
+//   appendSeconds.innerHTML = seconds;
+// }
+
+var Interval;
+var seconds = 00;
+var tens = 00;
+var minutes = 00;
+var hours = 00;
+
+function timer () {
+  // var buttonStart = document.getElementById('button-start');
   var appendTens = document.getElementById("tens")
   var appendSeconds = document.getElementById("seconds")
   var appendMinutes = document.getElementById("minutes")
   var appendHours = document.getElementById("hours")
-  // var buttonStart = document.getElementById('button-start');
-  var buttonStop = document.getElementById('button-stop');
-  var buttonReset = document.getElementById('button-reset');
-  var Interval;
-
   clearInterval(Interval);
   Interval = setInterval(startTimer, 10);
   // need to hide start button
 
-  buttonStop.onclick = function() {
-     clearInterval(Interval);
-  }
-  buttonReset.onclick = function() {
-    clearInterval(Interval);
-    minutes = "00";
-    tens = "00";
-  	seconds = "00";
-    appendMinutes.innerHTML = minutes;
-    appendTens.innerHTML = tens;
-  	appendSeconds.innerHTML = seconds;
-  }
   function startTimer () {
     tens++;
     if (tens < 9) {appendTens.innerHTML = "0" + tens;}
@@ -93,13 +97,13 @@ function shuffle(array) {
 }
 
 function genPic(i) {
-  var str = '<img src="img/screen' + i + '.jpg" style="width:1000px; height=700px;">'
+  var str = '<img src="img/screen' + i + '.jpg" style="width:100%";>'
   return str
 }
 
 function genAnsPic(i) {
   console.log('genaspic here');
-  var str = '<img src="img/ascreen' + i + '.jpg" style="width:1000px; height=700px;">'
+  var str = '<img src="img/ascreen' + i + '.jpg" style="width:100%; height=700px;">'
   return str
 }
 
@@ -122,6 +126,7 @@ function handleClick(input) {
   console.log('input dataset key', input.dataset.key);
   if (input.dataset.key === current) {
     document.getElementById('pictureContainer').innerHTML = genAnsPic(input.dataset.key);
+    clearInterval(Interval);
     // alert('donkey  balls');
     // next();
     document.getElementById('button-continue').style.visibility = "visible";
@@ -140,11 +145,13 @@ function game () {
 function next () {
   if (picOrder.length > 0) {
     current = picOrder.pop();
-    console.log(current);
+    timer();
     document.getElementById('pictureContainer').innerHTML = genPic(current);
     document.getElementById('button-continue').style.visibility = "hidden";
   }
   else {
-    alert('you win');
+    console.log(minutes);
+    var s = "<p>You win! You did it in " + minutes + " minutes " + "and " + seconds + " seconds.</p>";
+    document.getElementById('pictureContainer').innerHTML = s;
   }
 }
