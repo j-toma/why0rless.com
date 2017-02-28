@@ -1,29 +1,37 @@
 #labelContainer {
-  border: 1px solid black;
+  border: 10px solid black;
   padding-left: 20px;
+}
+
+#labels {
+  padding-bottom: 20px;
+}
+.button {
+  background-color: white;
+  border: 2px solid red;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+  margin-right: 5px;
 }
 
 #top {
   width: 100%;
   height: 10%;
-  /*position: absolute;*/
-  left: 0%;
-  top: 0%;
-  /*margin-left: -150px; /* Half of width */*/
-  /*margin-top: -50px;    /* Half of height */*/
 }
 
 #instructions {
-  border: 1px solid red;
+  border: 10px solid red;
   padding-left: 20px;
   padding-right: 20px;
   font-size: 18px;
   float: left;
   width: 50%;
+  /*margin-bottom: 10px;*/
 }
 
 #buttons {
-  border: 1px solid blue;
+  border: 10px solid blue;
   float: right;
   width: 45%;
 }
@@ -40,17 +48,19 @@
 }
 
 #button-continue {
-  visibility: hidden;``
-}
-
-#middle {
-  /*width: 100%;*/
+  visibility: hidden;
 }
 
 #pictureContainer {
-  border: 1px solid green;
+  border: 10px solid green;
   float: left;
+  margin-top: 20px;
   width: 55%;
+}
+
+#pictureContainer p {
+  padding-left: 20px;
+  font-size: 18px;
 }
 
 #middle-right {
@@ -60,5 +70,6 @@
 
 #time {
   padding-left: 20px;
-  border: 1px solid yellow;
+  border: 10px solid yellow;
+  font-size: 18px;
 }

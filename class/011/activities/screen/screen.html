@@ -16,31 +16,29 @@
   <div id="top">
     <div id="instructions">
       <h3>The Excel Screen</h3>
-      <p>You will be given a picture with a red box around some area of the Excell screen, click on the correct label from the list beneath the picture. When you click on the "I'm Ready" button, a timer will start. Try to label everything as quickly as you can.<p>
+      <p>You will be given a picture with a red box around some area of the Excell screen, click on the correct label from the list beneath the picture. When you click on the "I'm Ready" button, a timer will start. Try to label everything as quickly as you can. Check page 6 of your book.<p>
     </div>
     <div id="buttons">
       <input type="button" id="button-start" value="I'm Ready" onclick="game()">
       <input type="button" id="button-continue" value="Continue" onclick="next()">
     </div>
   </div>
-  <br>
-  <br>
   <div id="middle">
     <div id="pictureContainer">
-      <img src="img/screen.jpg" style="width:900px; height=600px;">
+      <img src="img/screen.jpg" style="width:100%; height=600px;">
     </div>
     <div id="middle-right">
+      <div id="labelContainer">
+        <h1>Labels</h1><br>
+        <div id="labels"></div>
+      </div>
+      <br>
       <div id="time">
         <h1>Stopwatch</h1>
         <p><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>:<span id=tens>00</span></p>
         <!-- <button id="button-start">Start</button> -->
         <!-- <button id="button-stop">Stop</button>
         <button id="button-reset">Reset</button> -->
-      </div>
-      <br>
-      <div id="labelContainer">
-        <h2>Labels</h2><br>
-        <div id="labels"></div>
       </div>
     </div>
   </div>
