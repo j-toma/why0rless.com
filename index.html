@@ -4,8 +4,40 @@
       <a href="kanban1/build/index.html">Kanban Boards</a>
       <a href="riddles/riddles.html">Riddles</a>
   <h1>Classes</h1>
-    <a href="class/005/005.html">005</a>
-    <a href="class/006/006.html">006</a>
+    <a href="class/005/005.html" onclick="p005();">005</a>
+    <a href="class/006/006.html" onclick="p006();">006</a>
     <a href="class/011/011.html">011</a>
   </body>
+
+  <SCRIPT>
+  function p005 () {
+    var key = "letmein5";
+    var input = prompt("Please enter your password to view this page!", ' ');
+    if (!input) {
+      history.go(-1);
+    }
+    if (input == key) {
+      console.log('match');
+      alert("Click OK to proceed");
+    } else {
+      history.go(-1);
+      window.location="https://why0rless.com";
+    }
+  }
+  function p006 () {
+    var key = "letmein6";
+    var input = prompt("Please enter your password to view this page!", ' ');
+    if (!input) {
+      history.go(-1);
+    }
+    if (input == key) {
+      console.log('match');
+      alert("Click OK to proceed");
+    } else {
+      history.go(-1);
+      window.location="https://why0rless.com";
+    }
+  }
+  </SCRIPT>
+
 </html>
