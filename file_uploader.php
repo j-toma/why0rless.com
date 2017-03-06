@@ -6,7 +6,7 @@ $targetfolder = 'upload';
 // owner will be the user/group the PHP script is run under
 if ( !file_exists($targetfolder) ) {
    $oldmask = umask(0);  // helpful when used in linux server
-   mkdir ($targetfolder, 0744);
+   mkdir ($targetfolder, 0755);
 }
 
 // $targetfolder = $targetfolder . basename( $_FILES['file']['name']);
