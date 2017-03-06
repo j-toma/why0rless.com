@@ -1,0 +1,79 @@
+<html>
+<head>
+<style>
+#slot1, #slot2, #slot3, #slot4, #slot5, #slot6, #slot7 {
+    width: 350px;
+    height: 90px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+#home1, #home2, #home3, #home4, #home5, #home6, #home7 {
+    width: 350px;
+    height: 90px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+#home {
+  float:left;
+}
+#slots {
+  float:right;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  console.log(ev.target);
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+  <h3>Producing a Good Worksheet</h3>
+  <p><b>Instructions</b>: The steps to producing a good worksheet have been jumbled. Drag them to the slots so that they are in the right order.</p>
+  <div id="homes">
+    <div id="home1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <div id="step1" draggable="true" ondragstart="drag(event)">Determine the worksheet's purpose, what it will include, and how the information will be organized.</div>
+    </div>
+    <div id="home2" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <div id="step2" draggable="true" ondragstart="drag(event)">Enter the data and the formulas into the worksheet.</div>
+    </div>
+    <div id="home3" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <div id="step4" draggable="true" ondragstart="drag(event)">Test the worksheet.</div>
+    </div>
+    <div id="home4" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <div id="step3" draggable="true" ondragstart="drag(event)">Edit the worksheet to correct any errors and make modifications.</div>
+    </div>
+    <div id="home5" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <div id="step4" draggable="true" ondragstart="drag(event)">Document the worksheet.</div>
+    </div>
+    <div id="home6" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <div id="step5" draggable="true" ondragstart="drag(event)">Improve the appearance of the worksheet.</div>
+    </div>
+    <div id="home7" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <div id="step6" draggable="true" ondragstart="drag(event)">Save and print the completed worksheet.</div>
+    </div>
+  </div>
+  <br>
+  <div id=slots>
+    <div id="slot1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="slot2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="slot3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="slot4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="slot5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="slot6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="slot7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  </div>
+  <br>
+  <div id="examples"></div>
+</body>
+</html>
