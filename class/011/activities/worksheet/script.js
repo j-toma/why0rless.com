@@ -17,10 +17,13 @@ function drag(ev) {
 }
 
 function drop(ev) {
-  ev.preventDefault();
+
   var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-  checkComplete();
+  ev.preventDefault();
+  if (!ev.target.hasChildNodes()) {
+    ev.target.appendChild(document.getElementById(data));
+  }
+  checkFull();
 }
 
 var data = {
@@ -77,7 +80,7 @@ function genSlots () {
     var slot = document.createElement('div');
     slot.setAttribute('id', 'slot' + (i + 1));
     slot.setAttribute('data-key', i+1);
-    slot.innerHTML = i+1;
+    // slot.innerHTML = i+1;
     slot.ondrop = function () { drop(event) };
     slot.ondragover = function () { allowDrop(event) };
     slots.appendChild(slot);
@@ -104,8 +107,8 @@ function checkComplete () {
   var correctCount = 0;
   for (var i=1; i<keys.length+1;i++) {
     var slot = slots.childNodes[i-1];
-    if (slot.childNodes.length > 1) {
-      var step = slot.childNodes[1];
+    if (slot.childNodes.length > 0) {
+      var step = slot.childNodes[0];
       if (slot.dataset.key === step.dataset.key) {
         correctCount += 1;
       }
