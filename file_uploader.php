@@ -9,8 +9,9 @@ if ( !file_exists($targetfolder) ) {
    mkdir ($targetfolder, 0744);
 }
 
-$targetfolder = $targetfolder . basename( $_FILES['file']['name']);
-if(move_uploaded_file($_FILES['file']['tmp_name'], $targetfolder))
+// $targetfolder = $targetfolder . basename( $_FILES['file']['name']);
+$name = basename( $_FILES['file']['name']);
+if(move_uploaded_file($_FILES['file']['tmp_name'], "$targetfolder/$name"))
 {
   echo "The file ". basename( $FILES['file']['name']). " is uploaded";
 }
