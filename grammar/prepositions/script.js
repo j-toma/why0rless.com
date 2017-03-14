@@ -21,7 +21,9 @@ function drop(ev) {
   var data = ev.dataTransfer.getData("text");
   ev.preventDefault();
   if (!ev.target.hasChildNodes()) {
-    ev.target.appendChild(document.getElementById(data));
+    var node = document.getElementById(data);
+    // node.setAttribute('id', 'dropZone');
+    ev.target.appendChild(node);
   }
   checkFull();
 }
@@ -31,19 +33,22 @@ var data = {
     key: 1,
     sentenceStart: "Steve, hurry up! Get",
     sentenceEnd: "the car.",
-    answer: "in"
+    answer: "in",
+    number: 0
   },
   2: {
     key: 2,
     sentenceStart: "Alice, here comes 119. Quick, get",
     sentenceEnd: "the bus.",
-    answer: "on"
+    answer: "on",
+    number: 0
   },
   3: {
     key: 3,
     sentenceStart: "Johnny comes",
     sentenceEnd: "Venezuela.",
-    answer: "from"
+    answer: "from",
+    number: 0
   },
   4: {
     key: 4,
@@ -87,7 +92,6 @@ var data = {
     sentenceEnd: "class without falling asleep.",
     answer: "through"
   }
-
 }
 
 var keys = Object.keys(data);
@@ -98,6 +102,7 @@ function genHomes () {
   var wordBank = document.getElementById('wordBank');
   for (var i=0; i<keys.length;i++) {
     var home = document.createElement('div');
+    home.setAttribute('class', 'home');
     home.setAttribute('id', 'home' + (i + 1));
     home.ondrop = function () { drop(event) };
     home.ondragover = function () { allowDrop(event) };
@@ -116,7 +121,6 @@ function genWord (i) {
   return word;
 }
 
-
 var fillOrder = shuffle(clone);
 function genFillIns () {
   var fillIns = document.getElementById('fillIns');
@@ -124,17 +128,20 @@ function genFillIns () {
     var fillIn = document.createElement('div');
     fillIn.setAttribute('id', 'fillIn' + (i+1));
     // fillIn.setAttribute('data-key', data[fillOrder[i]]['key']);
-    fillIn.appendChild(genSentence(data[fillOrder[i]]['key']));
+    fillIn.appendChild(genSentence(i+1,data[fillOrder[i]]['key']));
     fillIns.appendChild(fillIn);
   }
 }
 
-function genSentence (i) {
+function genSentence (num, key) {
+  //edit data
+  data[key]['number'] = num;
+
   var sentence = document.createElement('div');
-  sentence.setAttribute('id', 'sentence' + (i+1));
+  sentence.setAttribute('id', 'sentence' + (key+1));
 
   var sentenceStart = document.createElement('span');
-  sentenceStart.innerHTML = data[i]['sentenceStart']+' ';
+  sentenceStart.innerHTML = num + '. ' + data[key]['sentenceStart']+' ';
   sentence.appendChild(sentenceStart);
 
   var blank = document.createElement('span');
@@ -142,11 +149,11 @@ function genSentence (i) {
   blank.setAttribute('class', 'dropZone');
   blank.ondrop = function () { drop(event) };
   blank.ondragover = function () { allowDrop(event) };
-  blank.setAttribute('data-key', i);
+  blank.setAttribute('data-key', key);
   sentence.appendChild(blank)
 
   var sentenceEnd = document.createElement('span');
-  sentenceEnd.innerHTML = ' '+data[i]['sentenceEnd'];
+  sentenceEnd.innerHTML = ' '+data[key]['sentenceEnd'];
   sentence.appendChild(sentenceEnd);
 
   return sentence;
@@ -175,21 +182,42 @@ function checkFull () {
 
 function checkAnswers () {
   var correctCount = 0;
-  var incorrectKeys = [];
+  var incorrectNumbers = [];
   var answers = document.getElementsByClassName('dropZone');
   for (var i=0;i<answers.length;i++) {
     var sentenceKey = answers[i].dataset.key;
     var answerKey = answers[i].childNodes[0].dataset.key;
     if (sentenceKey === answerKey) {
+      answers[i].style.color = 'green';
+      // answers[i].childNodes[0].setAttribute('id', 'correct');
       correctCount++
     } else {
-      incorrectKeys.push(sentenceKey);
+      incorrectNumbers.push(data[sentenceKey]['number']);
+      console.log(answers[i].childNodes[0]);
+      restore(answers[i].childNodes[0]);
+      // answers[i].style.color = 'red';
+      // answers[i].childNodes[0].setAttribute('id', 'incorrect');
     }
   }
+  var result = document.getElementById('result');
   if (correctCount === Object.keys(data).length) {
-    alert("You did it!");
-    history.go(-1);
+    result.innerHTML = "<p>All your answers are correct!</p>"
+    result.style.color = "green";
+    result.style.fontSize = "xx-large";
   } else {
-    alert("Some of your answers are incorect.")
+    result.innerHTML = "Some of your answers are incorect: " + incorrectNumbers;
+    result.style.color = "red";
+    result.style.fontSize = "xx-large";
+  }
+  // return incorrectNumbers;
+}
+
+function restore (word) {
+  var homes = document.getElementsByClassName('home');
+  for (var i=0; i<homes.length;i++) {
+    if (homes[i].childNodes.length ==0) {
+      homes[i].append(word);
+      break;
+    }
   }
 }

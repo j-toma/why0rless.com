@@ -1,11 +1,11 @@
 #content {
   margin: auto;
-  width: 50%;
+  width: 70%;
   border: 1px solid green;
   padding: 25px;
 }
 
-#dropZone {
+.dropZone {
   display: inline-block;
   width: 4em;
   height: 1em;
@@ -13,9 +13,24 @@
   text-align: center;
 }
 
+#incorrect {
+  color: red;
+}
+
+#correct {
+  color: green;
+}
+
+#dropZone {
+  color: black;
+}
+
 #wordBank {
   font-size: 28px;
   border: 1px solid black;
+  display: inline-flex;
+  width: 100%;
+  overflow: auto;
 }
 
 #fillIns {
@@ -25,9 +40,10 @@
 }
 
 #home1, #home2, #home3, #home4, #home5, #home6, #home7, #home8, #home9, #home10 {
-  display: inline-block;
+  display: inline-flex;
   padding: 10px;
   height: 1.5em;
+  width: 3em;;
   margin: 10px;
   border: 1px solid black;
   background-color: #aaaaaa;
