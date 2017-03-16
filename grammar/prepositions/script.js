@@ -28,7 +28,172 @@ function drop(ev) {
   checkFull();
 }
 
-var data = {
+//
+// looks out the window,
+// plays on his phone
+// listen to
+// their pen was left behind
+// look over
+// talk about
+// go through the exercise
+// speak up
+// write down
+// sent out
+// hand out
+// get used to
+// turn around
+// come back you cant go to the toilet
+// turn down the volume
+// put out your cigarrette
+
+
+var class11b = {
+  1: {
+    key: 1,
+    sentenceStart: "I was glad that Lucky didn't turn",
+    sentenceEnd: "to talk to Shay.",
+    answer: "around",
+    number: 0
+  },
+  2: {
+    key: 2,
+    sentenceStart: "Even though we have security cameras in class, some students still play",
+    sentenceEnd: "their phones",
+    answer: "on",
+    number: 0
+  },
+  3: {
+    key: 3,
+    sentenceStart: "Selina is a good student because she is always listening",
+    sentenceEnd: "the teacher.",
+    answer: "to",
+    number: 0
+  },
+  4: {
+    key: 4,
+    sentenceStart: "Luke likes to talk",
+    sentenceEnd: "computers.",
+    answer: "about",
+    number: 0
+  },
+  5: {
+    key: 5,
+    sentenceStart: "Put",
+    sentenceEnd: "your cigarettes and come back to class.",
+    answer: "out",
+    number: 0
+  },
+  6: {
+    key: 6,
+    sentenceStart: "Yesterday I asked Tony to come",
+    sentenceEnd: "to the blackboard and draw a giraffe.",
+    answer: "up",
+    number: 0
+  },
+  7: {
+    key: 7,
+    sentenceStart: "Mike writes",
+    sentenceEnd: "new vocabulary in his GAC011 book.",
+    answer: "down",
+    number: 0
+  },
+  8: {
+    key: 8,
+    sentenceStart: "Does anyone want me to look",
+    sentenceEnd: "their essay before it's due?",
+    answer: "over",
+    number: 0
+  },
+  9: {
+    key: 9,
+    sentenceStart: "Edison used to sit",
+    sentenceEnd: "Balance.",
+    answer: "beside",
+    number: 0
+  },
+  10: {
+    key: 10,
+    sentenceStart: "Balance used to sit",
+    sentenceEnd: "Tony.",
+    answer: "behind",
+    number: 0
+  }
+}
+
+var class11a = {
+  1: {
+    key: 1,
+    sentenceStart: "Jonathan helped me plug",
+    sentenceEnd: "the speaker.",
+    answer: "in",
+    number: 0
+  },
+  2: {
+    key: 2,
+    sentenceStart: "Leo almost always sits",
+    sentenceEnd: "Oliver.",
+    answer: "beside",
+    number: 0
+  },
+  3: {
+    key: 3,
+    sentenceStart: "Stars came back from break",
+    sentenceEnd: "a new haircut.",
+    answer: "with",
+    number: 0
+  },
+  4: {
+    key: 4,
+    sentenceStart: "This semester, lots of students are bringing their laptops",
+    sentenceEnd: "class.",
+    answer: "to",
+    number: 0
+  },
+  5: {
+    key: 5,
+    sentenceStart: "I wish you guys would talk more",
+    sentenceEnd: "your personal lives.",
+    answer: "about",
+    number: 0
+  },
+  6: {
+    key: 6,
+    sentenceStart: "Once I caught Jessica looking",
+    sentenceEnd: "clothes on TaoBao.",
+    answer: "at",
+    number: 0
+  },
+  7: {
+    key: 7,
+    sentenceStart: "During GAC class, I can often see students working",
+    sentenceEnd: "ACT or IELTS material.",
+    answer: "on",
+    number: 0
+  },
+  8: {
+    key: 8,
+    sentenceStart: "Today I want to spend some time looking",
+    sentenceEnd: "your tests from last week.",
+    answer: "over",
+    number: 0
+  },
+  9: {
+    key: 9,
+    sentenceStart: "Yoko went",
+    sentenceEnd: "that exercise very quickly.",
+    answer: "through",
+    number: 0
+  },
+  10: {
+    key: 10,
+    sentenceStart: "Ivy, please hand",
+    sentenceEnd: "these papers for me.",
+    answer: "out",
+    number: 0
+  }
+}
+
+var class10 = {
   1: {
     key: 1,
     sentenceStart: "Steve, hurry up! Get",
@@ -53,44 +218,67 @@ var data = {
   4: {
     key: 4,
     sentenceStart: "I am going to catch him",
-    sentenceEnd: "surprise",
-    answer: "by"
+    sentenceEnd: "surprise.",
+    answer: "by",
+    number: 0
   },
   5: {
     key: 5,
     sentenceStart: "Miranda threw the ball",
     sentenceEnd: "Andy",
-    answer: "to"
+    answer: "to",
+    number: 0
   },
   6: {
     key: 6,
     sentenceStart: "Ulrica didn't know how Tom got",
-    sentenceEnd: "so much trouble",
-    answer: "into"
+    sentenceEnd: "so much trouble.",
+    answer: "into",
+    number: 0
   },
   7: {
     key: 7,
     sentenceStart: "Jonathan and Ryan biked",
     sentenceEnd: "Dian Chi in just 5 hours!",
-    answer: "around"
+    answer: "around",
+    number: 0
   },
   8: {
     key: 8,
     sentenceStart: "Allen played",
     sentenceEnd: "Tony in the final round.",
-    answer: "against"
+    answer: "against",
+    number: 0
   },
   9: {
     key: 9,
     sentenceStart: "Gray and Jing Ran jumped",
     sentenceEnd: "the fence to avoid an angry dog.",
-    answer: "over"
+    answer: "over",
+    number: 0
   },
   10: {
     key: 10,
     sentenceStart: "Amy always sits",
     sentenceEnd: "class without falling asleep.",
-    answer: "through"
+    answer: "through",
+    number: 0
+  }
+}
+
+var data = class10;
+// var data = [class10, class11a, class11b];
+function selectSentences(sentences) {
+  clear();
+  data = sentences;
+  init();
+}
+
+function clear () {
+  document.getElementById('wordBank').innerHTML = "";
+  document.getElementById('fillIns').innerHTML = "";
+  if (document.getElementById('result').childNodes.length != 0) {
+    document.getElementById('result').innerHTML = "";
   }
 }
 
@@ -205,7 +393,7 @@ function checkAnswers () {
     result.style.color = "green";
     result.style.fontSize = "xx-large";
   } else {
-    result.innerHTML = "Some of your answers are incorect: " + incorrectNumbers;
+    result.innerHTML = "Some of your answers are incorrect: " + incorrectNumbers;
     result.style.color = "red";
     result.style.fontSize = "xx-large";
   }

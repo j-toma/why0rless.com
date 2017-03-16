@@ -1,6 +1,14 @@
+#sidebar {
+  float: left;
+  border: 1px solid blue;
+  height: 25%;
+  width: 15%;
+  text-align: center;
+}
+
 #content {
   margin: auto;
-  width: 70%;
+  width: 65%;
   border: 1px solid green;
   padding: 25px;
 }
