@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<style>.mySlides {display:none;}</style>
+  <body>
+    <!-- <h2 class="w3-center">HTML slides</h2>
+    <div class="w3-content w3-display-container" style="max-width:400px">
+      <div class="mySlides w3-container w3-red">
+        <h1><b>Did You Know?</b></h1>
+        <h1><i>We plan to sell trips to the moon in the 2020s</i></h1>
+      </div>
+      <img class="mySlides" src="img/plate-cutlery.jpg" style="width:100%">
+      <div class="mySlides w3-container w3-xlarge w3-white w3-card-8">
+        <p><span class="w3-tag w3-yellow">New!</span>
+        <p>6 Crystal Glasses</p>
+        <p>Only $99 !!!</p>
+      </div>
+      <img class="mySlides" src="img/kite.jpg" style="width:100%">
+
+      <div class="mySlides w3-container">
+        <img class="mySlides" src="img/kite.jpg" style="width:100%">
+        <p>Hello, World!</p>
+      </div>
+
+      <a class="w3-btn-floating w3-display-left" onclick="plusDivs(-1)">&#10094;</a>
+      <a class="w3-btn-floating w3-display-right" onclick="plusDivs(1)">&#10095;</a>
+    </div> -->
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="img/breath.jpg" style="width:100%">
+        <div class="text">What is harder to catch the faster you run?</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/cupcake.jpg" style="width:100%">
+        <div class="text">What kind of cup doesn't hold water?</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="img/window.jpg" style="width:100%">
+        <div class="text">What kind of invention allows you to see right through a wall?</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/towel.jpg" style="width:100%">
+        <div class="text">What gets wet while it is drying?</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/table.jpg" style="width:100%">
+        <div class="text">What has four legs but can't walk?</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/keyboard.jpg" style="width:100%">
+        <div class="text">What object has keys that open no locks, space but no room, and you can enter but not go in?</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/fire.jpg" style="width:100%">
+        <div class="text">I am not alive but I grow. I don't have lungs but I need air. What am I?</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/potato.jpg" style="width:100%">
+        <div class="text">What does this mean? Pot oooooooo</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/address.jpg" style="width:100%">
+        <div class="text">What type of dress can never be worn?</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/hole.jpg" style="width:100%">
+        <div class="text">What gets bigger everytime you take from it?</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/kite.jpg" style="width:100%">
+        <div class="text">I love to dance and twist and prance, I shake my tail, as away I sail. Wingless, I fly into the sky. What am I?</div>
+      </div>
+
+      <div class="mySlides fade">
+        <h3>Sources:</h3>
+        <ul>
+          <li>Code: https://www.w3schools.com/howto/howto_js_slideshow.asp</li>
+          <li>Riddles: http://www.doriddles.com/</li>
+        </ul>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+      <span class="dot" onclick="currentSlide(9)"></span>
+      <span class="dot" onclick="currentSlide(10)"></span>
+      <span class="dot" onclick="currentSlide(11)"></span>
+      <span class="dot" onclick="currentSlide(12)"></span>
+    </div>
+
+    <script>
+    // var slideIndex = 1;
+    // showDivs(slideIndex);
+    //
+    // function plusDivs(n) {
+    //   showDivs(slideIndex += n);
+    // }
+    //
+    // function showDivs(n) {
+    //   var i;
+    //   var x = document.getElementsByClassName("mySlides");
+    //   if (n > x.length) {slideIndex = 1}
+    //   if (n < 1) {slideIndex = x.length}
+    //   for (i = 0; i < x.length; i++) {
+    //      x[i].style.display = "none";
+    //   }
+    //   x[slideIndex-1].style.display = "block";
+    // }
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+  </body>
+</html>
